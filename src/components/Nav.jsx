@@ -10,7 +10,7 @@ const Nav = () => {
       <Navbar>
         <Container>
           <NavLink to="/">
-            <FontAwesomeIcon icon={faPaintRoller} className="mr-3 text-success" fa-pulse />
+            <FontAwesomeIcon icon={faPaintRoller} className="mr-3 text-success" />
             <Navbar.Brand className="">Michelangelo</Navbar.Brand>
           </NavLink>
           <Navbar.Toggle />

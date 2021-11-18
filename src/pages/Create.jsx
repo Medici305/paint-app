@@ -1,10 +1,12 @@
 import React from "react";
+import { Container } from "react-bootstrap";
+import Construction from "../components/Construction";
 
 const Create = () => {
   return (
-    <div>
-      <h1>Creative</h1>
-    </div>
+    <Container>
+      <Construction />
+    </Container>
   );
 };
 
