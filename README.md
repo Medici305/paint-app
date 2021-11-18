@@ -226,6 +226,9 @@ Use this space to list resources you find helpful and would like to give credit 
 * [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
+https://www.pexels.com/photo/person-holding-paint-brushes-4483132/
+https://dribbble.com/shots/16834206-Project-Management-Website
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
