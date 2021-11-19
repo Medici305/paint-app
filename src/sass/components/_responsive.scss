@@ -1,7 +1,10 @@
 /* // Responsive */
 
-// 1. Laptop 
+// 1. Laptop
 @media only screen and (max-width: 992px) {
+  .row {
+    height: auto !important;
+  }
   h1 {
     font-size: 3rem;
   }

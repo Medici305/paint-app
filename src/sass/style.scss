@@ -1,5 +1,7 @@
 // Imports
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Praise&display=swap");
+// $dark-body-bg: #111;
+// @import "~bootstrap-darkmode/scss/darktheme";
 @import "./components/responsive";
 
 body {
@@ -22,6 +24,19 @@ p {
   font-weight: 500;
 }
 
+img {
+  width: 50% !important;
+  height: auto;
+  border-radius: 50% !important;
+  margin: 0 auto;
+}
+
+svg {
+  &:hover {
+    color: rgb(0, 0, 0) !important;
+  }
+}
+
 .navbar-brand {
   font: {
     family: Praise;
@@ -30,7 +45,7 @@ p {
 }
 
 .row {
-  height: 80vh !important;
+  //height: 80vh !important;
   margin: 2rem 0;
 }
 

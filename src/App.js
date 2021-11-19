@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
+
   return (
     <>
       <Nav />

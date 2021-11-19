@@ -102,7 +102,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [React-bootstrap](https://react-bootstrap.netlify.app/)
 * [React-Router-Dom](https://reactrouter.com/)
 * [Framer-Motion](https://framer.com/)
-* [Laravel](https://laravel.com)
+* [Sass](https://sass-lang.com/)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 
