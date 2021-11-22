@@ -21,13 +21,11 @@ const Team = () => {
       </div>
       <Col className="h-75 d-flex justify-content-center align-items-end">
         {" "}
-        <Card className="text-center border-success shadow pt-3 rounded" style={{ width: "28rem" }}>
-          <Card.Img
-            variant="top"
-            src={profile}
-            roundedCircle
-            className="roundedCirle"
-          />
+        <Card
+          className="text-center border-success shadow pt-3 rounded"
+          style={{ width: "28rem" }}
+        >
+          <Card.Img variant="top" src={profile} className="roundedCirle" />
           <Card.Body>
             <Card.Title>Front-End Developer</Card.Title>
             <Card.Text>

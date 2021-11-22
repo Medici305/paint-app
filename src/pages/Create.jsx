@@ -1,11 +1,11 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Construction from "../components/Construction";
+import Draw from "../components/Draw";
 
 const Create = () => {
   return (
     <Container>
-      <Construction />
+      <Draw />
     </Container>
   );
 };

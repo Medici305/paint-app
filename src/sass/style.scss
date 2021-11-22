@@ -1,7 +1,5 @@
 // Imports
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Praise&display=swap");
-// $dark-body-bg: #111;
-// @import "~bootstrap-darkmode/scss/darktheme";
 @import "./components/responsive";
 
 body {
@@ -58,6 +56,11 @@ svg {
 .bg {
   background-image: url(../images/draw-2.jpg) no-repeat center cover;
   object-fit: contain;
+  min-height: 100%;
+}
+
+.frame {
+
   min-height: 100%;
 }
 
