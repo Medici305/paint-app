@@ -41,7 +41,7 @@
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://the-paint-app.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
     ·
@@ -103,8 +103,8 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [React-Router-Dom](https://reactrouter.com/)
 * [Framer-Motion](https://framer.com/)
 * [Sass](https://sass-lang.com/)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Canvas-Api](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+* [RoughJS](https://roughjs.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -131,15 +131,11 @@ _Below is an example of how you can instruct your audience on installing and set
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/Medici305/paint-app.git
    ```
 3. Install NPM packages
    ```sh
    npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -204,9 +200,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Your Name - [@ProgrammingThug](https://twitter.com/ProgrammingThug) - JulienOsman25@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/Medici305/paint-app](https://github.com/Medici305/paint-app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

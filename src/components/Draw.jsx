@@ -58,17 +58,17 @@ const Draw = () => {
   };
   return (
     <Row
-      className="d-flex justify-content-center align-items-center text-center frame rounded"
-      style={{ minHeight: "80vh" }}
+      className="d-flex justify-content-center bg-primary framer align-items-center text-center frame rounded"
+      style={{ height: "80vh" }}
       ref={colRef}
     >
       <Col
         md={6}
-        className="h-75 d-flex px-0 w-75 d-flex justify-content-center align-items-center border border-dark shadow"
+        className="h-75 d-flex px-0 w-75 d-flex bg-success justify-content-center align-items-center border border-dark shadow"
         ref={colRef}
       >
         <canvas
-          className="bg-white border border-success my-5"
+          className="d-none bg-white border border-success my-5"
           width={window.innerWidth / 2}
           height={window.innerHeight / 1.45}
           onMouseDown={startDrawing}

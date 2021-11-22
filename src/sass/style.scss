@@ -60,7 +60,8 @@ svg {
 }
 
 .frame {
-
+  background-image: url(../images/draw-2.jpg) no-repeat center cover;
+  object-fit: contain;
   min-height: 100%;
 }
 
