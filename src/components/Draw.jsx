@@ -16,7 +16,7 @@ const Draw = () => {
   // UseState
   const [element, setElement] = useState([]);
   const [drawing, setDrawing] = useState(false);
-  const [elementType, setElementType] = useState("line");
+  const [tool, setTool] = useState("line");
   const [windowSize, setWindowSize] = useState({
     width: undefined,
     height: undefined,
@@ -56,13 +56,7 @@ const Draw = () => {
     setDrawing(true);
     const { offsetX, offsetY } = nativeEvent;
 
-    const element = createElement(
-      offsetX,
-      offsetY,
-      offsetX,
-      offsetY,
-      elementType
-    );
+    const element = createElement(offsetX, offsetY, offsetX, offsetY, tool);
     setElement((prevState) => [...prevState, element]);
   };
 
@@ -75,7 +69,7 @@ const Draw = () => {
     const { offsetX, offsetY } = nativeEvent;
     const index = element.length - 1;
     const { x1, y1 } = element[index];
-    const updatedElement = createElement(x1, y1, offsetX, offsetY, elementType);
+    const updatedElement = createElement(x1, y1, offsetX, offsetY, tool);
 
     const elementsCopy = [...element];
     elementsCopy[index] = updatedElement;
@@ -112,7 +106,7 @@ const Draw = () => {
         <fieldset className="w-100">
           <Form.Group as={Row} className="mb-3 d-block">
             <Form.Label as="legend" column sm={2}>
-              Shape
+              Selection
             </Form.Label>
             <Col
               sm={10}
@@ -122,15 +116,15 @@ const Draw = () => {
                 type="radio"
                 label="Line"
                 name="line"
-                checked={elementType === "line"}
-                onChange={() => setElementType("line")}
+                checked={tool === "line"}
+                onChange={() => setTool("line")}
               />
               <Form.Check
                 type="radio"
                 label="Rectangle"
                 name="rectangle"
-                checked={elementType === "rectangle"}
-                onChange={() => setElementType("rectangle")}
+                checked={tool === "rectangle"}
+                onChange={() => setTool("rectangle")}
               />
             </Col>
           </Form.Group>

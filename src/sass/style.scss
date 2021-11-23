@@ -42,9 +42,16 @@ svg {
   }
 }
 
+.steps {
+  width: 25% !important;
+  height: auto;
+  border-radius: 50% !important;
+  margin: 0 auto;
+}
+
 .row {
   //height: 80vh !important;
-  margin: 2rem 0;
+  margin: 2rem 0 5rem 0;
 }
 
 .carousel-indicators,
