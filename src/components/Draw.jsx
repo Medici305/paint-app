@@ -1,11 +1,14 @@
 import React, { useLayoutEffect, useState, useRef, useEffect } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Form } from "react-bootstrap";
 import rough from "roughjs/bundled/rough.esm";
 
 const generator = rough.generator();
 
-const createElement = (x1, y1, x2, y2) => {
-  const roughElement = generator.line(x1, y1, x2, y2);
+const createElement = (x1, y1, x2, y2, type) => {
+  const roughElement =
+    type === "line"
+      ? generator.line(x1, y1, x2, y2)
+      : generator.rectangle(x1, y1, x2 - x1, y2 - y1);
   return { x1, y1, x2, y2, roughElement };
 };
 
@@ -13,6 +16,7 @@ const Draw = () => {
   // UseState
   const [element, setElement] = useState([]);
   const [drawing, setDrawing] = useState(false);
+  const [elementType, setElementType] = useState("line");
   const [windowSize, setWindowSize] = useState({
     width: undefined,
     height: undefined,
@@ -46,12 +50,19 @@ const Draw = () => {
     const roughCanvas = rough.canvas(canvas);
     element.forEach(({ roughElement }) => roughCanvas.draw(roughElement));
   }, [element]);
+
   // Functions
   const startDrawing = ({ nativeEvent }) => {
     setDrawing(true);
     const { offsetX, offsetY } = nativeEvent;
 
-    const element = createElement(offsetX, offsetY, offsetX, offsetY);
+    const element = createElement(
+      offsetX,
+      offsetY,
+      offsetX,
+      offsetY,
+      elementType
+    );
     setElement((prevState) => [...prevState, element]);
   };
 
@@ -64,7 +75,7 @@ const Draw = () => {
     const { offsetX, offsetY } = nativeEvent;
     const index = element.length - 1;
     const { x1, y1 } = element[index];
-    const updatedElement = createElement(x1, y1, offsetX, offsetY);
+    const updatedElement = createElement(x1, y1, offsetX, offsetY, elementType);
 
     const elementsCopy = [...element];
     elementsCopy[index] = updatedElement;
@@ -72,7 +83,7 @@ const Draw = () => {
   };
   return (
     <Row
-      className="d-flex justify-content-center frame align-items-center text-center frame rounded"
+      className="d-flex justify-content-around frame align-items-center text-center frame rounded"
       style={{ height: "80vh" }}
       ref={colRef}
     >
@@ -82,7 +93,7 @@ const Draw = () => {
         ref={colRef}
       >
         <canvas
-          className="bg-white border border-dark shadow rounded my-5"
+          className="bg-white shadow rounded my-5"
           width={windowSize.width}
           height={windowSize.height}
           onMouseDown={startDrawing}
@@ -92,6 +103,38 @@ const Draw = () => {
         >
           Canvas
         </canvas>
+      </Col>
+      <Col
+        xs={2}
+        className="bg-white rounded shadow h-75 d-flex justify-content-center align-items-center"
+      >
+        {" "}
+        <fieldset className="w-100">
+          <Form.Group as={Row} className="mb-3 d-block">
+            <Form.Label as="legend" column sm={2}>
+              Shape
+            </Form.Label>
+            <Col
+              sm={10}
+              className="d-flex flex-column justify-content-center align-items-center"
+            >
+              <Form.Check
+                type="radio"
+                label="Line"
+                name="line"
+                checked={elementType === "line"}
+                onChange={() => setElementType("line")}
+              />
+              <Form.Check
+                type="radio"
+                label="Rectangle"
+                name="rectangle"
+                checked={elementType === "rectangle"}
+                onChange={() => setElementType("rectangle")}
+              />
+            </Col>
+          </Form.Group>
+        </fieldset>
       </Col>
     </Row>
   );
