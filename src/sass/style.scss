@@ -53,14 +53,11 @@ svg {
   visibility: hidden;
 }
 
-.bg {
-  background-image: url(../images/draw-2.jpg) no-repeat center cover;
-  object-fit: contain;
-  min-height: 100%;
-}
-
 .frame {
-  background-image: url(../images/draw-2.jpg) no-repeat center cover;
+  background-image: url(../images/frame-2.jpeg) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   object-fit: contain;
   min-height: 100%;
 }

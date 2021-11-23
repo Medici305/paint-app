@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState, useRef } from "react";
+import React, { useLayoutEffect, useState, useRef, useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
 import rough from "roughjs/bundled/rough.esm";
 
@@ -13,15 +13,29 @@ const Draw = () => {
   // UseState
   const [element, setElement] = useState([]);
   const [drawing, setDrawing] = useState(false);
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
   // UseRef
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const colRef = useRef(null);
-  // UseEffect
-  // useEffect(() => {
-  //   console.log(colRef);
-  //   console.log(window.innerWidth);
-  // }, [window.innerWidth, window.innerHeight]);
+  useEffect(() => {
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize({
+        width: window.innerWidth / 1.57,
+        height: window.innerHeight / 1.69,
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // UseLayoutEffect
   useLayoutEffect(() => {
     const canvas = canvasRef.current;
@@ -58,19 +72,19 @@ const Draw = () => {
   };
   return (
     <Row
-      className="d-flex justify-content-center bg-primary framer align-items-center text-center frame rounded"
+      className="d-flex justify-content-center frame align-items-center text-center frame rounded"
       style={{ height: "80vh" }}
       ref={colRef}
     >
       <Col
         md={6}
-        className="h-75 d-flex px-0 w-75 d-flex bg-success justify-content-center align-items-center border border-dark shadow"
+        className="h-75 d-flex px-0 w-75 d-flex justify-content-center align-items-center"
         ref={colRef}
       >
         <canvas
-          className="d-none bg-white border border-success my-5"
-          width={window.innerWidth / 2}
-          height={window.innerHeight / 1.45}
+          className="bg-white border border-dark shadow rounded my-5"
+          width={windowSize.width}
+          height={windowSize.height}
           onMouseDown={startDrawing}
           onMouseMove={draw}
           onMouseUp={stopDrawing}
@@ -84,47 +98,3 @@ const Draw = () => {
 };
 
 export default Draw;
-
-/*
-  // UseState
-  const [isDrawing, setIsDrawing] = useState(false);
-  // UseRef
-  const canvasRef = useRef(null);
-  const colRef = useRef(null);
-  const contextRef = useRef(null);
-  // UseEffect
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    console.log(canvas);
-    canvas.width = window.innerWidth * 2;
-    canvas.height = window.innerHeight * 2;
-    canvas.style.width = `${window.innerWidth}px`;
-    canvas.style.height = `${window.innerHeight}px`;
-    console.log(canvas);
-
-    const context = canvas.getContext("2d");
-    context.scale(2, 2);
-    context.lineCap = "round";
-    context.strokeStyle = "black";
-    context.lineWidth = 5;
-    contextRef.current = context;
-  }, []);
-  // Functions
-  const startDrawing = ({ nativeEvent }) => {
-    const { offsetX, offsetY } = nativeEvent;
-    contextRef.current.beginPath();
-    contextRef.current.moveTo(offsetX, offsetY);
-    setIsDrawing(true);
-  };
-
-  const stopDrawing = () => {
-    contextRef.current.closePath();
-    setIsDrawing(false);
-  };
-  const draw = ({ nativeEvent }) => {
-    if (!isDrawing) return;
-    const { offsetX, offsetY } = nativeEvent;
-    contextRef.current.lineTo(offsetX, offsetY);
-    contextRef.current.stroke();
-  };
-*/
