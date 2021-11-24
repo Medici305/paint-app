@@ -12,7 +12,7 @@ const Instructions = () => {
         xs={12}
         className=" d-flex justify-content-around align-items-center"
       >
-        <img src={step1} alt="step-1" className="steps  shadow" roundedCircle />
+        <img src={step1} alt="step-1" className="steps  shadow"  />
         <div className="d-flex flex-column justify-content-center align-items-center">
           <h3>Select your tool</h3>
           <p className="w-50 ">
@@ -32,13 +32,13 @@ const Instructions = () => {
             quam minima ipsum, aperiam vero.
           </p>
         </div>
-        <img src={step2} alt="step-2" className="steps  shadow" roundedCircle />
+        <img src={step2} alt="step-2" className="steps  shadow"  />
       </Col>
       <Col
         xs={12}
         className=" d-flex justify-content-around align-items-center"
       >
-        <img src={step3} alt="step-3" className="steps  shadow" roundedCircle />
+        <img src={step3} alt="step-3" className="steps  shadow"  />
         <div className="d-flex flex-column justify-content-center align-items-center">
           <h3>Undo and Erase</h3>
           <p className="w-50 ">
