@@ -6,7 +6,10 @@ import bg_3 from "../images/girl-3.webp";
 
 const Poster = () => {
   return (
-    <Carousel fade variant="dark">
+    <Carousel
+      fade
+      variant="dark"
+    >
       <Carousel.Item>
         <img className="d-block w-100" src={bg_1} alt="girl-one" />
       </Carousel.Item>

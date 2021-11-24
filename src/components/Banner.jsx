@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <Row
-      className="d-flex justify-content-around mt-4"
+      className="d-flex justify-content-around mt-4 bg-white border border-success shadow rounded"
       style={{ height: "80vh" }}
     >
       <Col
@@ -14,7 +14,7 @@ const Banner = () => {
         lg={5}
         className=" d-flex flex-column justify-content-center order-2 order-lg-1"
       >
-        <h1 className="font-weight-bold text-center text-lg-left">
+        <h1 className="font-weight-bold text-center text-lg-left bg-white">
           Create a new space for your project
         </h1>
         <p className="my-lg-5 my-4 text-center">
