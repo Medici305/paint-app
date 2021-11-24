@@ -6,7 +6,7 @@ import Team from "../components/Team";
 
 const Home = () => {
   return (
-    <Container>
+    <Container className='bg-white'>
       <Banner />
       <Instructions />
       <Team />

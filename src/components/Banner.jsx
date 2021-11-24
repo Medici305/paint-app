@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <Row className="d-flex justify-content-between" style={{ height: "80vh" }}>
+    <Row
+      className="d-flex justify-content-around mt-4"
+      style={{ height: "80vh" }}
+    >
       <Col
         xs={12}
         lg={5}

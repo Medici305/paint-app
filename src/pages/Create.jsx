@@ -4,7 +4,7 @@ import Draw from "../components/Draw";
 
 const Create = () => {
   return (
-    <Container>
+    <Container className="my-5">
       <Draw />
     </Container>
   );

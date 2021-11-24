@@ -6,22 +6,20 @@ import { Link, NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <Container className="p-3 bg-white rounded border-bottom">
-      <Navbar>
-        <Container>
-          <NavLink to="/">
-            <FontAwesomeIcon icon={faPaintRoller} className="mr-3 text-success" />
-            <Navbar.Brand className="">Michelangelo</Navbar.Brand>
-          </NavLink>
-          <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
-            <Link to="creative">
-              <Button variant="outline-success">Create</Button>
-            </Link>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </Container>
+    <Navbar className="p-3 sticky-top border-bottom bg-white">
+      <Container>
+        <NavLink to="/">
+          <FontAwesomeIcon icon={faPaintRoller} className="mr-3 text-success" />
+          <Navbar.Brand className="">Michelangelo</Navbar.Brand>
+        </NavLink>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end">
+          <Link to="creative">
+            <Button variant="outline-success">Create</Button>
+          </Link>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 

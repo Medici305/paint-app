@@ -12,12 +12,12 @@ const Instructions = () => {
         xs={12}
         className=" d-flex justify-content-around align-items-center"
       >
-        <img src={step1} alt="step-1" className="steps  shadow"  />
+        <img src={step1} alt="step-1" className="steps" />
         <div className="d-flex flex-column justify-content-center align-items-center">
           <h3>Select your tool</h3>
           <p className="w-50 ">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis unde
-            quam minima ipsum, aperiam vero.
+            Choose your tool ranging from a simple straight line to the 2
+            dimensional rectangle shape. Let your creativity go wild.
           </p>
         </div>
       </Col>
@@ -28,22 +28,23 @@ const Instructions = () => {
         <div className="d-flex flex-column justify-content-center align-items-center">
           <h3>Move your shape</h3>
           <p className="w-50 ">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis unde
-            quam minima ipsum, aperiam vero.
+            Not content with the postion of where you build your master piece,
+            simply select that shape and move it to where ever you desire.
           </p>
         </div>
-        <img src={step2} alt="step-2" className="steps  shadow"  />
+        <img src={step2} alt="step-2" className="steps" />
       </Col>
       <Col
         xs={12}
         className=" d-flex justify-content-around align-items-center"
       >
-        <img src={step3} alt="step-3" className="steps  shadow"  />
+        <img src={step3} alt="step-3" className="steps" />
         <div className="d-flex flex-column justify-content-center align-items-center">
           <h3>Undo and Erase</h3>
           <p className="w-50 ">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis unde
-            quam minima ipsum, aperiam vero.
+            Made a mistake, no worries, simple click undo to go one step back.
+            Make an error in judgementent and want to undo the change click redo
+            to go one step forward.
           </p>
         </div>
       </Col>
