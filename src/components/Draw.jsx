@@ -291,6 +291,15 @@ const Draw = () => {
       updateElement(id, newX1, newY1, newX1 + width, newY1 + height, type);
     }
   };
+
+  const download = () => {
+    console.log(canvasRef);
+    let url = canvasRef.current.toDataURL("image/png");
+    let link = document.createElement("a");
+    link.download = "paint.png";
+    link.href = url;
+    link.click();
+  };
   return (
     <Row
       className="d-flex flex-column flex-lg-row justify-content-around frame align-items-center text-center frame rounded pb-5"
@@ -382,7 +391,7 @@ const Draw = () => {
               <Button
                 variant="success"
                 className="mt-2 mt-lg-0 px-lg-4"
-                download={canvasRef}
+                onClick={download}
               >
                 {" "}
                 <FontAwesomeIcon icon={faSave} className="text-white" />
