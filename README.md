@@ -105,6 +105,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [Sass](https://sass-lang.com/)
 * [Canvas-Api](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
 * [RoughJS](https://roughjs.com/)
+* [Perfect-freehand](https://www.npmjs.com/package/perfect-freehand)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
