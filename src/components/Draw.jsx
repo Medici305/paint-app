@@ -322,7 +322,7 @@ const Draw = () => {
         <fieldset className="w-100">
           <Form.Group
             as={Row}
-            className="mb-0 d-block border border-dark d-flex flex-column justify-content-center align-items-center"
+            className="mb-0 d-block d-flex flex-column justify-content-center align-items-center"
           >
             <Form.Label as="legend" column className="text-underline">
               <h3>Tools</h3>
